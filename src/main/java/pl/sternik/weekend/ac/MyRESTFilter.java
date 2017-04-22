@@ -9,29 +9,29 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter(filterName = "/MyRESTFilter", 
-//servletNames = { "HelloServlet" }, 
-urlPatterns = { "/hello" })
+@WebFilter(filterName = "/MyRESTFilter",
+		// servletNames = { "HelloServlet" },
+		urlPatterns = { "/hello" })
 public class MyRESTFilter implements javax.servlet.Filter {
 
-    @Override
-    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
-            throws IOException, ServletException {
-        
-        System.out.println("--------------- aaaaaaa ---------------");
-        
-        chain.doFilter(req, res);
-        
-        System.out.println("--------------- bbbbbbb ---------------");
-    }
+	@Override
+	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain)
+			throws IOException, ServletException {
 
-    @Override
-    public void destroy() {
+		System.out.println("--------------- aaaaaaa ---------------");
 
-    }
+		chain.doFilter(req, res);
 
-    @Override
-    public void init(FilterConfig arg0) throws ServletException {
+		System.out.println("--------------- bbbbbbb ---------------");
+	}
 
-    }
+	@Override
+	public void destroy() {
+
+	}
+
+	@Override
+	public void init(FilterConfig arg0) throws ServletException {
+
+	}
 }
