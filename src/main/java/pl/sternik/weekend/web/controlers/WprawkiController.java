@@ -84,5 +84,7 @@ public class WprawkiController {
 		}
 		return new ResponseEntity<Moneta>(m, HttpStatus.CREATED);
 	}
+	
+	
 
 }
