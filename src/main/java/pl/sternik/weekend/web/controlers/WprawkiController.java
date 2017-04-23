@@ -9,17 +9,18 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class WprawkiController { 
 
 	
-//	@GetMapping("/wprawki2")
-//	@ResponseBody
-//	public String wprawkiParam(@RequestParam("cos") String cosParam){
-//		return "Wprawki z param cos =" + cosParam)
-//	}
+	@GetMapping("/wprawki2")
+	@ResponseBody
+	public String wprawkiParam(@RequestParam("cos") String cosParam){
+		return "Wprawki z param cos =" + cosParam;
+	}
 	
 	
 	@RequestMapping(path = "/wprawki", method = RequestMethod.GET)
