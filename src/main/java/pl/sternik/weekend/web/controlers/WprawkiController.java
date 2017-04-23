@@ -71,7 +71,7 @@ public class WprawkiController {
 			System.out.println(e.getClass().getName());
 			m = new Moneta();
 			m.setNumerKatalogowy(id);
-			m.setKrajPochodzenia("POlska");
+			m.setKrajPochodzenia("Polska");
 			m.setStatus(Status.NOWA);
 			m.setNominal(10L);
 		}

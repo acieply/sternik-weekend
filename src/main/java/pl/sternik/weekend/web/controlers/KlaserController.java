@@ -17,25 +17,32 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import pl.sternik.weekend.ac.services.KlaserService;
+import pl.sternik.weekend.ac.services.NotificationService;
+import pl.sternik.weekend.entites.Moneta;
+
+
+
+
 @Controller
 public class KlaserController {
 
-//    @Autowired
+    @Autowired
     // @Qualifier("spring")
-//    private KlaserService klaserService;
+    private KlaserService klaserService;
 
-//    @Autowired
-//    private NotificationService notificationService;
+    @Autowired
+    private NotificationService notificationService;
 
 //    @ModelAttribute("statusyAll")
 //    public List<Status> populateStatusy() {
 //        return Arrays.asList(Status.ALL);
 //    }
 
-//    @ModelAttribute("coinsAll")
-//    public List<Moneta> populateCoins() {
-//        return this.klaserService.findAll();
-//    }
+    @ModelAttribute("coinsAll")
+    public List<Moneta> populateCoins() {
+        return this.klaserService.findAll();
+    }
 
 //    @ModelAttribute("coinsToSell")
 //    public List<Moneta> populateCoinsToSell() {
@@ -52,11 +59,11 @@ public class KlaserController {
         return "index";
     }
 
-//    @RequestMapping(value = "/monety", method = RequestMethod.GET)
-//    public String showMainPage(Model model) {
-//        model.addAttribute("MyMessages",  notificationService.getNotificationMessages());
-//        return "klaser";
-//    }
+    @RequestMapping(value = "/monety", method = RequestMethod.GET)
+    public String showMainPage(Model model) {
+       model.addAttribute("MyMessages",  notificationService.getNotificationMessages());
+        return "klaser";
+    }
 
     @RequestMapping("/tosell")
     public String showToSellPage() {
