@@ -12,16 +12,10 @@
 
   <h1>Strona główna, Wprawki</h1>
   <h3 th:text="${msg}"> domyslne cos</h3>
-  <h3 th:text="${data}"> domyslne cos2</h3>
+  <h3 th:text="| dziaj jest :${data}|"> domyslne cos2</h3>
   <h2 th:text="${cos}"> tu bedzie cos</h2>
-  
-    <!-- <h3 th:text="#{msg.zparam(${id})}"> domyslne cos</h3> -->
-  <h3 th:utext="#{bbb}"> aaa </h3>
-  
-<!--   <h3 th:text="${moneta.opis}"> cosik o monecie</h3> -->
-  
   <footer />
-
+ <h3 th:utext="#{bbb}"> aaa </h3>
 </body>
 
 </html>
