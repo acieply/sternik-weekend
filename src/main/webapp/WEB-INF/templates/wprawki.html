@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
 <title>Title</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
 <body>
-
   <header />
 
   <h1>Strona główna, Wprawki</h1>
   <h3 th:text="${msg}"> domyslne cos</h3>
-  <h3 th:text="| dziaj jest :${data}|"> domyslne cos2</h3>
-  <h2 th:text="${cos}"> tu bedzie cos</h2>
+  <h3 th:text="|dziaj jest :${data}|"> domyslne cos2</h3>
+  <h2 th:text="${cos} == 1?'Jeden':(${cos}?:'Nic nie ma')"> tu bedzie cos</h2>
   <footer />
  <h3 th:utext="#{bbb}"> aaa </h3>
 </body>
