@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import pl.sternik.weekend.ac.repositories.MonetaAlreadyExistsException;
-import pl.sternik.weekend.ac.repositories.MonetyRepository;
-import pl.sternik.weekend.ac.repositories.NoSuchMonetaException;
+import pl.sternik.weekend.repositories.MonetaAlreadyExistsException;
+import pl.sternik.weekend.repositories.MonetyRepository;
+import pl.sternik.weekend.repositories.NoSuchMonetaException;
 import pl.sternik.weekend.entites.Moneta;
 import pl.sternik.weekend.entites.Status;
 

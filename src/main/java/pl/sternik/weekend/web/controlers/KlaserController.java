@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import pl.sternik.weekend.ac.services.KlaserService;
-import pl.sternik.weekend.ac.services.NotificationService;
+import pl.sternik.weekend.services.KlaserService;
+import pl.sternik.weekend.services.NotificationService;
 import pl.sternik.weekend.entites.Moneta;
 
 @Controller
