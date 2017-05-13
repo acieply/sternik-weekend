@@ -3,29 +3,34 @@ package pl.sternik.weekend.entites;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 //@Entity
 //@XmlRootElement
 public class Moneta {
 
-//    @NotNull
+	@NotNull
 //    @Id
     private Long numerKatalogowy;
 	
-//	@NotNull
+	@NotNull
 	private Long nominal;
 	
 	//@Size(min=2, max=30, message = "{Size.moneta.opis}")
-//	@Size(min=2, max=30, message = "Opis should be in the range [{min}...{max}]")
+	@Size(min=2, max=30, message = "Opis should be in the range [{min}...{max}]")
 	private String opis;
-//	@NotEmpty
+	@NotEmpty
 	private String waluta;
-//	@NotNull
+	@NotNull
 	private BigDecimal cenaNabycia;
-//	@NotNull
+	@NotNull
 	private Date dataNabycia;
-//	@NotEmpty
+	@NotEmpty
 	private String krajPochodzenia;
-//	@NotNull
+	@NotNull
 	private Status status;
 
 	
