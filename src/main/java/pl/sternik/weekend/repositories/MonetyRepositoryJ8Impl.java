@@ -1,4 +1,4 @@
-package pl.sternik.weekend.ac.repositories;
+package pl.sternik.weekend.repositories;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

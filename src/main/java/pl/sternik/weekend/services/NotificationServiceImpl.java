@@ -1,4 +1,4 @@
-package pl.sternik.weekend.ac.services;
+package pl.sternik.weekend.services;
 
 import java.util.ArrayList;
 import java.util.List;

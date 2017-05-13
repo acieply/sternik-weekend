@@ -1,4 +1,4 @@
-package pl.sternik.weekend.ac.repositories;
+package pl.sternik.weekend.repositories;
 
 public class MonetaAlreadyExistsException extends Exception {
     private static final long serialVersionUID = -4576295597218170159L;

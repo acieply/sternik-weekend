@@ -1,4 +1,4 @@
-package pl.sternik.weekend.ac.services;
+package pl.sternik.weekend.services;
 
 import java.util.List;
 import java.util.Objects;
@@ -10,9 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 
-import pl.sternik.weekend.ac.repositories.MonetaAlreadyExistsException;
-import pl.sternik.weekend.ac.repositories.MonetyRepository;
-import pl.sternik.weekend.ac.repositories.NoSuchMonetaException;
+import pl.sternik.weekend.repositories.MonetaAlreadyExistsException;
+import pl.sternik.weekend.repositories.MonetyRepository;
+import pl.sternik.weekend.repositories.NoSuchMonetaException;
 import pl.sternik.weekend.entites.Moneta;
 import pl.sternik.weekend.entites.Status;
 
