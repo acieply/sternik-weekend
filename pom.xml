@@ -28,7 +28,7 @@
 
 
 	<build>
-		<finalName>sternik-weekend10</finalName>
+		<finalName>sternik-weekend1</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
