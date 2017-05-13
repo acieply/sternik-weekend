@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import pl.sternik.weekend.ac.services.KlaserService;
-import pl.sternik.weekend.ac.services.NotificationService;
+import pl.sternik.weekend.services.KlaserService;
+import pl.sternik.weekend.services.NotificationService;
 import pl.sternik.weekend.entites.Moneta;
 import pl.sternik.weekend.entites.Status;
 
