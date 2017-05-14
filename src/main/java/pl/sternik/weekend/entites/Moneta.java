@@ -12,30 +12,30 @@ public class Moneta {
 	private Long numerKatalogowy;
 
 	// @NotNull
-	private Long nominal;
+	private Long rocznik;
 
-	private String opis;
+	private String marka;
 	// @NotEmpty
-	private String waluta;
+	private String model;
 	// @NotNull
-	private BigDecimal cenaNabycia;
+	private BigDecimal cenaZakupu;
 	// @NotNull
-	private Date dataNabycia;
+	private Date dataWprowadzeniaModelu;
 	// @NotEmpty
-	private String krajPochodzenia;
+	private String rodzajPaliwa;
 	// @NotNull
 	private Status status;
 
-	public static Moneta produceMoneta(Long numerKatalogowy, String krajPochodzenia, Long nominal, String waluta,
-			String opis, Date dataNabycia, BigDecimal cenaNabycia, Status status) {
+	public static Moneta produceMoneta(Long numerKatalogowy, String rodzajPaliwa, Long rocznik, String model,
+			String marka, Date dataWprowadzeniaModelu, BigDecimal cenaZakupu, Status status) {
 		Moneta m = new Moneta();
 		m.numerKatalogowy = numerKatalogowy;
-		m.krajPochodzenia = krajPochodzenia;
-		m.nominal = nominal;
-		m.opis = opis;
-		m.waluta = waluta;
-		m.cenaNabycia = cenaNabycia;
-		m.dataNabycia = dataNabycia;
+		m.rodzajPaliwa = rodzajPaliwa;
+		m.rocznik = rocznik;
+		m.marka = marka;
+		m.model = model;
+		m.cenaZakupu = cenaZakupu;
+		m.dataWprowadzeniaModelu = dataWprowadzeniaModelu;
 		m.status = status;
 		return m;
 	}
@@ -44,28 +44,28 @@ public class Moneta {
 		return numerKatalogowy;
 	}
 
-	public Long getNominal() {
-		return nominal;
+	public Long getRocznik() {
+		return rocznik;
 	}
 
-	public String getOpis() {
-		return opis;
+	public String getMarka() {
+		return marka;
 	}
 
-	public String getWaluta() {
-		return waluta;
+	public String getModel() {
+		return model;
 	}
 
-	public BigDecimal getCenaNabycia() {
-		return cenaNabycia;
+	public BigDecimal getCenaZakupu() {
+		return cenaZakupu;
 	}
 
-	public Date getDataNabycia() {
-		return dataNabycia;
+	public Date getDataWprowadzeniaModelu() {
+		return dataWprowadzeniaModelu;
 	}
 
-	public String getKrajPochodzenia() {
-		return krajPochodzenia;
+	public String getRodzajPaliwa() {
+		return rodzajPaliwa;
 	}
 
 	public Status getStatus() {
@@ -76,28 +76,28 @@ public class Moneta {
 		this.numerKatalogowy = numerKatalogowy;
 	}
 
-	public void setNominal(Long nominal) {
-		this.nominal = nominal;
+	public void setRocznik(Long rocznik) {
+		this.rocznik = rocznik;
 	}
 
-	public void setOpis(String opis) {
-		this.opis = opis;
+	public void setMarka(String marka) {
+		this.marka = marka;
 	}
 
-	public void setWaluta(String waluta) {
-		this.waluta = waluta;
+	public void setModel(String model) {
+		this.model = model;
 	}
 
-	public void setCenaNabycia(BigDecimal cenaNabycia) {
-		this.cenaNabycia = cenaNabycia;
+	public void setCenaZakupu(BigDecimal cenaZakupu) {
+		this.cenaZakupu = cenaZakupu;
 	}
 
-	public void setDataNabycia(Date dataNabycia) {
-		this.dataNabycia = dataNabycia;
+	public void setDataWprowadzeniaModelu(Date dataWprowadzeniaModelu) {
+		this.dataWprowadzeniaModelu = dataWprowadzeniaModelu;
 	}
 
-	public void setKrajPochodzenia(String krajPochodzenia) {
-		this.krajPochodzenia = krajPochodzenia;
+	public void setRodzajPaliwa(String rodzajPaliwa) {
+		this.rodzajPaliwa = rodzajPaliwa;
 	}
 
 	public void setStatus(Status status) {
@@ -108,14 +108,14 @@ public class Moneta {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((opis == null) ? 0 : opis.hashCode());
-		result = prime * result + ((cenaNabycia == null) ? 0 : cenaNabycia.hashCode());
-		result = prime * result + ((dataNabycia == null) ? 0 : dataNabycia.hashCode());
-		result = prime * result + ((krajPochodzenia == null) ? 0 : krajPochodzenia.hashCode());
-		result = prime * result + ((nominal == null) ? 0 : nominal.hashCode());
+		result = prime * result + ((marka == null) ? 0 : marka.hashCode());
+		result = prime * result + ((cenaZakupu == null) ? 0 : cenaZakupu.hashCode());
+		result = prime * result + ((dataWprowadzeniaModelu == null) ? 0 : dataWprowadzeniaModelu.hashCode());
+		result = prime * result + ((rodzajPaliwa == null) ? 0 : rodzajPaliwa.hashCode());
+		result = prime * result + ((rocznik == null) ? 0 : rocznik.hashCode());
 		result = prime * result + ((numerKatalogowy == null) ? 0 : numerKatalogowy.hashCode());
 		result = prime * result + ((status == null) ? 0 : status.hashCode());
-		result = prime * result + ((waluta == null) ? 0 : waluta.hashCode());
+		result = prime * result + ((model == null) ? 0 : model.hashCode());
 		return result;
 	}
 
@@ -128,30 +128,30 @@ public class Moneta {
 		if (getClass() != obj.getClass())
 			return false;
 		Moneta other = (Moneta) obj;
-		if (opis == null) {
-			if (other.opis != null)
+		if (marka == null) {
+			if (other.marka != null)
 				return false;
-		} else if (!opis.equals(other.opis))
+		} else if (!marka.equals(other.marka))
 			return false;
-		if (cenaNabycia == null) {
-			if (other.cenaNabycia != null)
+		if (cenaZakupu == null) {
+			if (other.cenaZakupu != null)
 				return false;
-		} else if (!cenaNabycia.equals(other.cenaNabycia))
+		} else if (!cenaZakupu.equals(other.cenaZakupu))
 			return false;
-		if (dataNabycia == null) {
-			if (other.dataNabycia != null)
+		if (dataWprowadzeniaModelu == null) {
+			if (other.dataWprowadzeniaModelu != null)
 				return false;
-		} else if (!dataNabycia.equals(other.dataNabycia))
+		} else if (!dataWprowadzeniaModelu.equals(other.dataWprowadzeniaModelu))
 			return false;
-		if (krajPochodzenia == null) {
-			if (other.krajPochodzenia != null)
+		if (rodzajPaliwa == null) {
+			if (other.rodzajPaliwa != null)
 				return false;
-		} else if (!krajPochodzenia.equals(other.krajPochodzenia))
+		} else if (!rodzajPaliwa.equals(other.rodzajPaliwa))
 			return false;
-		if (nominal == null) {
-			if (other.nominal != null)
+		if (rocznik == null) {
+			if (other.rocznik != null)
 				return false;
-		} else if (!nominal.equals(other.nominal))
+		} else if (!rocznik.equals(other.rocznik))
 			return false;
 		if (numerKatalogowy == null) {
 			if (other.numerKatalogowy != null)
@@ -163,19 +163,19 @@ public class Moneta {
 				return false;
 		} else if (!status.equals(other.status))
 			return false;
-		if (waluta == null) {
-			if (other.waluta != null)
+		if (model == null) {
+			if (other.model != null)
 				return false;
-		} else if (!waluta.equals(other.waluta))
+		} else if (!model.equals(other.model))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Moneta [numerKatalogowy=" + numerKatalogowy + ", nominal=" + nominal + ", Opis=" + opis + ", waluta="
-				+ waluta + ", cenaNabycia=" + cenaNabycia + ", dataNabycia=" + dataNabycia + ", krajPochodzenia="
-				+ krajPochodzenia + ", status=" + status + "]";
+		return "Moneta [numerKatalogowy=" + numerKatalogowy + ", rocznik=" + rocznik + ", marka=" + marka + ", model="
+				+ model + ", cenaZakupu=" + cenaZakupu + ", dataWprowadzeniaModelu=" + dataWprowadzeniaModelu + ", rodzajPaliwa="
+				+ rodzajPaliwa + ", status=" + status + "]";
 	}
 
 }

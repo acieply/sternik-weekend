@@ -2,9 +2,9 @@ package pl.sternik.weekend.entites;
 
 public enum Status {
 
-	NOWA("Nowa"), DO_SPRZEDANIA("Do sprzedania"), DUBLET("Dublet");
+	PREMIERA("Premiera"), WYPRZEDAZ("Wyprzedaż"), PRZED_SPRZEDAZ("Przed sprzedaż");
 
-	public static final Status[] ALL = { NOWA, DO_SPRZEDANIA, DUBLET };
+	public static final Status[] ALL = { PREMIERA, WYPRZEDAZ, PRZED_SPRZEDAZ };
 
 	private final String name;
 

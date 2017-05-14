@@ -3,19 +3,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head th:fragment="site-head">
-<title th:text="#{title.application}">Klaser</title>
+<title th:text="#{title.application}">Salon</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" media="all" href="../../css/klaser.css" th:href="@{/css/klaser.css}" />
-<link rel="icon" href="../../imgages/coins.ico" th:href="@{/images/coins.ico}" />
+<link rel="icon" href="../../imgages/flag.ico" th:href="@{/images/flag.ico}" />
 </head>
 
 <body>
 
   <header th:fragment="site-header">
-    <a href="index.html" th:href="@{/}"><img src="../../images/klaser.jpg" th:src="@{/images/klaser.jpg}"/> </a> 
-    <a href="klaser.html" th:href="@{/monety}">Wszystkie monety</a>
-    <a href="tosell.html" th:href="@{/tosell}">Monety do sprzedania</a>
-    <a href="moneta.html" th:href="@{/monety/create}">Dodaj monetę</a>
+    <a href="index.html" th:href="@{/}"><img src="../../logo.jpg" th:src="@{/images/logo.jpg}"/> </a> 
+    <a href="klaser.html" th:href="@{/monety}">Wszystkie samochody</a>
+    <a href="tosell.html" th:href="@{/tosell}">Samochody z wyprzedaży</a>
+    <a href="moneta.html" th:href="@{/monety/create}">Dodaj samochód</a>
    <!--  Zalogowany: <b th:inline="text"> [[${#httpServletRequest.remoteUser}]] </b>  
     <form th:action="@{/wyloguj}" method="POST" style="display: inline">
         <input type=submit class="link" value="Wyloguj"/>
@@ -32,12 +32,11 @@
     <h2 th:text="#{title.list}" style="display: inline;">Klaser monet</h2>    
     <img src="../../images/klaser.jpg" alt="Klaser logo" title="Klaser logo" th:src="@{/images/klaser.jpg}"
       th:alt-title="#{title.application}" style="float: right;" /> 
-    <p> A tu jakis kontent, raczej sie nie pokaże </p>
   </div>
 
   <footer th:fragment="site-footer"> 
   Artur Ciepły <a href="https://github.com/acieply/sternik-weekend"> Source code</a>
-  &copy; Sternik Klaser System, 2017 
+  &copy; Salon Japan Cars, 2017 
   </footer>
 
 </body>

@@ -71,9 +71,9 @@ public class WprawkiController {
 			System.out.println(e.getClass().getName());
 			m = new Moneta();
 			m.setNumerKatalogowy(id);
-			m.setKrajPochodzenia("Polska");
-			m.setStatus(Status.NOWA);
-			m.setNominal(10L);
+			m.setRodzajPaliwa("benzyna");
+			m.setStatus(Status.WYPRZEDAZ);
+			m.setRocznik(2010L);
 		}
 		try {
 			baza.create(m);

@@ -21,23 +21,24 @@ public class ProstaBazaDanych implements MonetyRepository {
 		baza = new Moneta[15];
 		Moneta m = new Moneta();
 		m.setNumerKatalogowy(0L);
-		m.setKrajPochodzenia("Polska");
-		m.setNominal(1L);
-		m.setWaluta("zł");
-		m.setOpis("Ładna nowiutka złotóweczka");
-		m.setDataNabycia(new Date());
-		m.setCenaNabycia(new BigDecimal("1.2"));
-		m.setStatus(Status.NOWA);
+		m.setRocznik(2016L);
+		m.setMarka("Toyota");
+		m.setModel("Auris");
+		m.setCenaZakupu(new BigDecimal("59.000"));
+		m.setDataWprowadzeniaModelu(new Date());
+		m.setRodzajPaliwa("benzyna");
+		m.setStatus(Status.WYPRZEDAZ);
 		baza[0] = m;
+
 		m = new Moneta();
 		m.setNumerKatalogowy(2L);
-		m.setKrajPochodzenia("Polska");
-		m.setNominal(2L);
-		m.setWaluta("zł");
-		m.setOpis("Ładna nowiutka dwu złotóweczka");
-		m.setDataNabycia(new Date());
-		m.setCenaNabycia(new BigDecimal("2.2"));
-		m.setStatus(Status.DO_SPRZEDANIA);
+		m.setRocznik(2016L);
+		m.setMarka("Toyota");
+		m.setModel("Corolla");
+		m.setRodzajPaliwa("benzyna");
+		m.setDataWprowadzeniaModelu(new Date());
+		m.setCenaZakupu(new BigDecimal("89.900"));
+		m.setStatus(Status.PRZED_SPRZEDAZ);
 		baza[2] = m;
 
 	}
@@ -50,7 +51,7 @@ public class ProstaBazaDanych implements MonetyRepository {
 	public Moneta create(Moneta moneta) throws MonetaAlreadyExistsException {
 		if (moneta.getNumerKatalogowy() != null && baza[moneta.getNumerKatalogowy().intValue()] != null) {
 			if (moneta.getNumerKatalogowy().equals(baza[moneta.getNumerKatalogowy().intValue()].getNumerKatalogowy())) {
-				throw new MonetaAlreadyExistsException("Już jest moneta o takim numerze.");
+				throw new MonetaAlreadyExistsException("Jest już takie auto o podanym numerze.");
 			}
 		}
 		for (int i = 0; i < baza.length; i++) {
@@ -67,7 +68,7 @@ public class ProstaBazaDanych implements MonetyRepository {
 	public void deleteById(Long id) throws NoSuchMonetaException {
 		int numerKatalogowy = id.intValue();
 		if (!sprawdzPoprawnoscNumeruKatalogowego(numerKatalogowy)) {
-			throw new NoSuchMonetaException("Nie poprawny numer katologowy");
+			throw new NoSuchMonetaException("Niepoprawny numer katologowy");
 		}
 		// tu troche zle ;)
 		baza[numerKatalogowy] = null;
@@ -77,12 +78,12 @@ public class ProstaBazaDanych implements MonetyRepository {
 	public Moneta update(Moneta moneta) throws NoSuchMonetaException {
 		int numerKatalogowy = moneta.getNumerKatalogowy().intValue();
 		if (!sprawdzPoprawnoscNumeruKatalogowego(numerKatalogowy)) {
-			throw new NoSuchMonetaException("Nie poprawny numer katologowy");
+			throw new NoSuchMonetaException("Niepoprawny numer katologowy");
 		}
 
 		Moneta m = baza[moneta.getNumerKatalogowy().intValue()];
 		if (m == null) {
-			throw new NoSuchMonetaException("Brak takiej monety.");
+			throw new NoSuchMonetaException("Brak takiego samochodu");
 		} else {
 			baza[moneta.getNumerKatalogowy().intValue()] = moneta;
 		}

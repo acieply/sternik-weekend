@@ -110,7 +110,7 @@ public class MonetyController {
 	@RequestMapping(value = "/monety/create", method = RequestMethod.GET)
 	public String showMainPages(final Moneta moneta) {
 		// Ustawiamy date nowej monety, na dole strony do dodania
-		moneta.setDataNabycia(Calendar.getInstance().getTime());
+		moneta.setDataWprowadzeniaModelu(Calendar.getInstance().getTime());
 		return "moneta";
 	}
 }

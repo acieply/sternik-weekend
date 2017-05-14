@@ -18,21 +18,14 @@ public class MonetyRepositoryJ8Impl implements MonetyRepository {
 
 	private List<Moneta> monety = new ArrayList<Moneta>() {
 		{
-			add(Moneta.produceMoneta(1L, "Polska", 1L, "zł", "Ładna nowiutka złotóweczka", new Date(),
-					new BigDecimal("1.2"), Status.NOWA));
-			add(Moneta.produceMoneta(2L, "Polska", 1L, "zł", "First Moneta", new Date(), new BigDecimal("1.2"),
-					Status.DO_SPRZEDANIA));
-			add(Moneta.produceMoneta(3L, "Polska", 1L, "zł", "Second Moneta", new Date(), new BigDecimal("1.2"),
-					Status.DUBLET));
-			add(Moneta.produceMoneta(4L, "Polska", 1L, "zł", "Forth Moneta", new Date(), new BigDecimal("1.2"),
-					Status.DO_SPRZEDANIA));
-			add(Moneta.produceMoneta(5L, "Polska", 1L, "zł", "Moneta Number 5", new Date(), new BigDecimal("1.2"),
-					Status.NOWA));
-			add(Moneta.produceMoneta(6L, "Polska", 1L, "zł", "Sixth Moneta", new Date(), new BigDecimal("1.2"),
-					Status.NOWA));
+			add(Moneta.produceMoneta(1L, "Benzyna", 2014L, "6", "Mazda", new Date(), new BigDecimal("100.200"),
+					Status.PREMIERA));
+			add(Moneta.produceMoneta(6L, "Benzyna", 2014L, "6", "Mazda", new Date(), new BigDecimal("100.200"),
+					Status.PREMIERA));			;
+			add(Moneta.produceMoneta(5L, "Benzyna", 2014L, "6", "Mazda", new Date(), new BigDecimal("100.200"),
+					Status.PREMIERA));
 		}
 	};
-
 	@Override
 	public List<Moneta> findAll() {
 		return this.monety;
@@ -64,7 +57,7 @@ public class MonetyRepositoryJ8Impl implements MonetyRepository {
 				return moneta;
 			}
 		}
-		throw new NoSuchMonetaException("Nie ma takiej Monety: " + moneta.getNumerKatalogowy());
+		throw new NoSuchMonetaException("Nie ma takiego samochodu: " + moneta.getNumerKatalogowy());
 	}
 
 	@Override
@@ -74,7 +67,7 @@ public class MonetyRepositoryJ8Impl implements MonetyRepository {
 				this.monety.remove(i);
 			}
 		}
-		throw new NoSuchMonetaException("Nie ma takiej Monety: " + id);
+		throw new NoSuchMonetaException("Nie ma takiego samochodu: " + id);
 	}
 
 }

@@ -3,43 +3,41 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head th:replace="layout ::site-head">
-<title>Klaser monet</title>
+<title>Salon samochodowy</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" media="all" href="../../css/klaser.css" th:href="@{/css/klaser.css}" />
 </head>
-
 <body>
   <header th:replace="layout :: site-header" />
   <div>
-    <h2 th:text="#{title.list}" style="display: inline;">Lista monet</h2>
-  </div>
-  
+    <h2 th:text="#{title.list}" style="display: inline;">Lista Samochodów</h2>
+  </div>  
   <div class="listaMonet" th:unless="${#lists.isEmpty(coinsAll)}">
     <table>
       <thead>
         <tr>
           <th th:text="#{klaser.numerKatalogowy}">numerKatalogowy</th>
-          <th th:text="#{klaser.nominal}">nominal</th>
-          <th th:text="#{klaser.opis}">opis</th>
-          <th th:text="#{klaser.waluta}">waluta</th>
-          <th th:text="#{klaser.cenaNabycia}">cenaNabycia</th>
-          <th th:text="#{klaser.dataNabycia}">dataNabycia</th>
-          <th th:text="#{klaser.krajPochodzenia}">krajPochodzenia</th>
+          <th th:text="#{klaser.rocznik}">rocznik</th>
+          <th th:text="#{klaser.marka}">marka</th>
+          <th th:text="#{klaser.model}">model</th>
+          <th th:text="#{klaser.cenaZakupu}">cenaZakupu</th>
+          <th th:text="#{klaser.dataWprowadzeniaModelu}">dataWprowadzeniaModelu</th>
+          <th th:text="#{klaser.rodzajPaliwa}">rodzajPaliwa</th>
           <th th:text="#{klaser.status}">status</th>
           <th th:text="#{klaser.operacje}">operacje</th>
         </tr>
       </thead>
-      <tbody>
+      <body>
         <tr th:each="coin : ${coinsAll}">
           <form action="#" th:action="@{/monety}" th:object="${coin}" method="post">
           <td th:text="${coin.numerKatalogowy}">1</td>
-          <td th:text="${coin.nominal}">100</td>
-          <td th:text="${coin.opis}">Długi opis</td>
-          <td th:text="${coin.waluta}">zł</td>
-          <td th:text="${{coin.cenaNabycia}}">5.12</td>
-          <td th:text="${{coin.dataNabycia}}">2011/13/01</td>
-          <td th:text="${coin.krajPochodzenia}">Polska</td>
-          <td th:text="#{${'klaser.status.' + coin.status}}">Nowa</td>
+          <td th:text="${coin.rocznik}">2010</td>
+          <td th:text="${coin.marka}">Toyota</td>
+          <td th:text="${coin.model}">Auris</td>
+          <td th:text="${{coin.cenaZakupu}}">39.500</td>
+          <td th:text="${{coin.dataWprowadzeniaModelu}}">2011/13/01</td>
+          <td th:text="${coin.rodzajPaliwa}">benzyna</td>
+          <td th:text="#{${'klaser.status.' + coin.status}}">Wyprzedaż</td>
           <td>
             <button type="submit" name="remove" th:value="${coin.numerKatalogowy}" 
             th:text="#{klaser.remove}">Dell</button>
