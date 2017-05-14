@@ -5,10 +5,11 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import org.jvnet.hk2.annotations.Service;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
 
 import pl.sternik.weekend.repositories.MonetaAlreadyExistsException;
 import pl.sternik.weekend.repositories.MonetyRepository;

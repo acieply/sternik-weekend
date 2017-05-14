@@ -5,8 +5,9 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
-import org.jvnet.hk2.annotations.Service;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class NotificationServiceImpl implements NotificationService {

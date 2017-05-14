@@ -31,6 +31,7 @@ public class MonetyController {
 
     @Autowired
     // @Qualifier("spring")
+    @Qualifier("tablica")
     private KlaserService klaserService;
 
     @Autowired

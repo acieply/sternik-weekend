@@ -4,13 +4,13 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-import org.jvnet.hk2.annotations.Service;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import pl.sternik.weekend.repositories.MonetyRepository;
 import pl.sternik.weekend.entites.Moneta;
-
 import pl.sternik.weekend.repositories.MonetaAlreadyExistsException;
 import pl.sternik.weekend.repositories.NoSuchMonetaException;
 
