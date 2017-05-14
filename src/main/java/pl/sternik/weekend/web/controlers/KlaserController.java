@@ -20,7 +20,7 @@ import pl.sternik.weekend.services.NotificationService;
 public class KlaserController {
 
 	@Autowired
-	//@Qualifier("spring")
+	// @Qualifier("spring")
 	@Qualifier("tablica")
 	private KlaserService klaserService;
 
@@ -29,7 +29,7 @@ public class KlaserController {
 
 	@ModelAttribute("statusyAll")
 	public List<Status> populateStatusy() {
-	return Arrays.asList(Status.ALL);
+		return Arrays.asList(Status.ALL);
 	}
 
 	@ModelAttribute("coinsAll")
@@ -39,7 +39,7 @@ public class KlaserController {
 
 	@ModelAttribute("coinsToSell")
 	public List<Moneta> populateCoinsToSell() {
-	return this.klaserService.findAllToSell();
+		return this.klaserService.findAllToSell();
 	}
 
 	// @ModelAttribute("coinsLast3")

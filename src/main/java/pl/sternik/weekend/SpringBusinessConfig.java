@@ -12,14 +12,14 @@ import org.springframework.context.annotation.ImportResource;
 
 @Configuration
 @ComponentScan(basePackages = { "pl.sternik.weekend" }, excludeFilters = {
-        @Filter(type = FilterType.REGEX, pattern = "pl\\.sternik\\.weekend\\.web\\..*") })
-//@ImportResource({"classpath:/applicationContext.xml"})//,"classpath:/database-config.xml"})
+		@Filter(type = FilterType.REGEX, pattern = "pl\\.sternik\\.weekend\\.web\\..*") })
+// @ImportResource({"classpath:/applicationContext.xml"})//,"classpath:/database-config.xml"})
 public class SpringBusinessConfig {
 
-/*    @Autowired
-    DataSource dataSource;
-    @Bean
-    public JdbcTemplate getJdbcTemplate() {
-        return new JdbcTemplate(dataSource);
-    }*/
+	/*
+	 * @Autowired DataSource dataSource;
+	 * 
+	 * @Bean public JdbcTemplate getJdbcTemplate() { return new
+	 * JdbcTemplate(dataSource); }
+	 */
 }

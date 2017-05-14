@@ -7,31 +7,27 @@ import java.util.Date;
 //@XmlRootElement
 public class Moneta {
 
-	//@NotNull
-//    @Id
-    private Long numerKatalogowy;
-	
-	//@NotNull
+	// @NotNull
+	// @Id
+	private Long numerKatalogowy;
+
+	// @NotNull
 	private Long nominal;
-	
-	//@Size(min=2, max=30, message = "{Size.moneta.opis}")
-	//@Size(min=2, max=30, message = "Opis should be in the range [{min}...{max}]")
+
 	private String opis;
-	//@NotEmpty
+	// @NotEmpty
 	private String waluta;
-	//@NotNull
+	// @NotNull
 	private BigDecimal cenaNabycia;
-	//@NotNull
+	// @NotNull
 	private Date dataNabycia;
-	//@NotEmpty
+	// @NotEmpty
 	private String krajPochodzenia;
-	//@NotNull
+	// @NotNull
 	private Status status;
 
-	
-	
-	public static Moneta produceMoneta(Long numerKatalogowy, String krajPochodzenia, Long nominal, String waluta, String opis,
-			Date dataNabycia, BigDecimal cenaNabycia, Status status) {
+	public static Moneta produceMoneta(Long numerKatalogowy, String krajPochodzenia, Long nominal, String waluta,
+			String opis, Date dataNabycia, BigDecimal cenaNabycia, Status status) {
 		Moneta m = new Moneta();
 		m.numerKatalogowy = numerKatalogowy;
 		m.krajPochodzenia = krajPochodzenia;
